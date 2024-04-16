@@ -1,0 +1,44 @@
+Profileinstellungen:
+Check:
+git config user.name
+git config user.email
+Ändern:
+git config --global user.name “user”
+git config --global user.email “email”
+
+Initialisierungsdateien haben normalerweise den Namen gitconfg.
+Sie liegen im Userordner oder in der git-Installation unter etc.
+
+Private Repositories brauchen einen Personal Access Token (PAT).
+Private:
+git clone https://token@github.com/account/repo.git
+Public:
+git clone https://github.com/account/repo.git
+
+Git - Organisation:
+Working Directory
+Staging Area
+Repository
+Remote Repository
+
+Cheat Sheet:
+git --version;zum Schauen, ob git vom System gefunden wird
+git clone;So kann man z.B. ein repo von GitHub holen.
+git init;Lokales Repo erstellen - Man muss im Projekt - Arbeitsordner sein!
+git add;File(s) in die Staging Area befördern ("git add .": alle)
+git commit -m "message";Verschieben von Dateien aus der Staging Area in das Repository
+git status;1) Zur Klärung: Ist man in einem Repo, 2) Stand der Files in git
+git log;Chronologische Auflistung aller commits aufrufen
+git diff;
+git remote -v;Nachschauen, was am Remote Branch anders ist
+git remote add origin https://[url.git];lokales Repository auf remote branch kopieren
+git remote rename <old> <new>;Umbenennen eines remote branches
+git remote remove <name>;Löschen eines remote branches
+git push;Kopieren der Änderungen vom lokalen Repository auf den Remote Branch
+git push -u origin main[/master];Kopieren der Änderungen vom lokalen Repository auf den Remote Branch (explizite Form)
+git fetch;Mal nachschauen, was am remote branch Neues liegt
+git fetch <remote> <branch>;Branch auswählen
+git fetch origin <branch>;Branch auswählen
+git merge;Merge
+git pull;Kopieren der Änderungen vom Remote Branch auf das lokale Repository
+git branch -M main;Remote Branch umbenennen von master auf main
