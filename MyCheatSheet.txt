@@ -29,7 +29,7 @@ git add;File(s) in die Staging Area befördern ("git add .": alle)
 git commit -m "message";Verschieben von Dateien aus der Staging Area in das Repository
 git status;1) Zur Klärung: Ist man in einem Repo, 2) Stand der Files in git
 git log;Chronologische Auflistung aller commits aufrufen
-git diff;
+git diff;zeigt Änderungen von Dateien an: Letzter commit vs. aktuell unstaged
 git remote -v;Nachschauen, was am Remote Branch anders ist
 git remote add origin https://[url.git];lokales Repository auf remote branch kopieren
 git remote rename <old> <new>;Umbenennen eines remote branches
@@ -39,6 +39,11 @@ git push -u origin main[/master];Kopieren der Änderungen vom lokalen Repository 
 git fetch;Mal nachschauen, was am remote branch Neues liegt
 git fetch <remote> <branch>;Branch auswählen
 git fetch origin <branch>;Branch auswählen
-git merge;Merge
+git merge <from_branch>;Merge branches
 git pull;Kopieren der Änderungen vom Remote Branch auf das lokale Repository
 git branch -M main;Remote Branch umbenennen von master auf main
+git branch -m <neuer Name>;aktuellen branch (auf dem ich mich befinde) umbenennen
+git branch -d <branch_name>;branch löschen
+git branch;alle branches auflisten
+git branch <branch_name>;branch anlegen
+git switch <branch_name>;Umschalten auf anderen branch
