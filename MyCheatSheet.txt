@@ -21,6 +21,8 @@ Staging Area
 Repository
 Remote Repository
 
+Zur graphischen Darstellung von commits und branches kann man GitLens verwenden!
+
 Cheat Sheet:
 git --version;zum Schauen, ob git vom System gefunden wird
 git clone;So kann man z.B. ein repo von GitHub holen.
@@ -41,8 +43,7 @@ git fetch <remote> <branch>;Branch auswählen
 git fetch origin <branch>;Branch auswählen
 git merge <from_branch>;Merge branches
 git pull;Kopieren der Änderungen vom Remote Branch auf das lokale Repository
-git branch -M main;Remote Branch umbenennen von master auf main
-git branch -m <neuer Name>;aktuellen branch (auf dem ich mich befinde) umbenennen
+git branch (-m | -M) [<oldbranch>] <newbranch>git branch (-m | -M) [<oldbranch>] <newbranch>;branch umbenennen
 git branch -d <branch_name>;branch löschen
 git branch;alle branches auflisten
 git branch <branch_name>;branch anlegen
