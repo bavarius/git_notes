@@ -29,6 +29,7 @@ git add;File(s) in die Staging Area befördern ("git add .": alle)
 git commit -m "message";Verschieben von Dateien aus der Staging Area in das Repository
 git status;1) Zur Klärung: Ist man in einem Repo, 2) Stand der Files in git
 git log;Chronologische Auflistung aller commits aufrufen
+git log --oneline;Einzeilige Darstellung der commits mit den ersten 7 Zeichen des Hashes
 git diff;zeigt Änderungen von Dateien an: Letzter commit vs. aktuell unstaged
 git remote -v;Nachschauen, was am Remote Branch anders ist
 git remote add origin https://[url.git];lokales Repository auf remote branch kopieren
@@ -47,3 +48,11 @@ git branch -d <branch_name>;branch löschen
 git branch;alle branches auflisten
 git branch <branch_name>;branch anlegen
 git switch <branch_name>;Umschalten auf anderen branch
+git checkout 732f75c;Detached HEAD - Zurückgehen in der History
+git checkout main;HEAD zurücksetzen
+git restore <file_name>;bearbeitetes File zum letzten commit-Stand zurücksetzen
+git restore <file_name> --source HEAD~<n> <file_name>;mit der Datei um n commits zurückgehen
+git restore --staged <file_name>;Datei aus der Staging Area zurückholen
+git reset <hash_of_target>;nur commits zurücksetzen, nicht die Dateien - löscht die commits nach dem Target
+git reset 732f75c --hard;commits und Dateien zurücksetzen
+git revert;erstellt einen neuen commit mit demselben Inhalt der referenzierten Version => Historie bleibt erhalten!
