@@ -33,10 +33,11 @@ git status;1) Zur Klärung: Ist man in einem Repo, 2) Stand der Files in git
 git log;Chronologische Auflistung aller commits aufrufen
 git log --oneline;Einzeilige Darstellung der commits mit den ersten 7 Zeichen des Hashes
 git diff;zeigt Änderungen von Dateien an: Letzter commit vs. aktuell unstaged
+git remote;Auflisten der Remote-Verbindungen
 git remote -v;Nachschauen, was am Remote Branch anders ist
 git remote add origin https://[url.git];lokales Repository auf remote branch kopieren
 git remote rename <old> <new>;Umbenennen eines remote branches
-git remote remove <name>;Löschen eines remote branches
+git remote remove (oder rm) <name>;Löschen eines remote branches
 git push;Kopieren der Änderungen vom lokalen Repository auf den Remote Branch
 git push -u origin main[/master];Kopieren der Änderungen vom lokalen Repository auf den Remote Branch (explizite Form)
 git fetch;Mal nachschauen, was am remote branch Neues liegt
@@ -57,3 +58,5 @@ git restore --staged <file_name>;Datei aus der Staging Area zurückholen
 git reset <hash_of_target>;nur commits zurücksetzen, nicht die Dateien - löscht die commits nach dem Target
 git reset 732f75c --hard;commits und Dateien zurücksetzen
 git revert;erstellt einen neuen commit mit demselben Inhalt der referenzierten Version => Historie bleibt erhalten!
+git stash;(wörtlich: verstecken) - Zwischenspeichern von Dateien, ohne diese zu committen
+git stash pop;Versteckte Dateien wieder hervorholen
